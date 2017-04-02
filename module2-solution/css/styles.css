@@ -1,17 +1,11 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
 body {
     font-family: Tahoma, Georgia, Serif;
-}
-
-div#row {
-  width: 100%;
-  position: relative;
-  padding-right: 20px;
 }
 
 h1#title {
@@ -20,10 +14,14 @@ h1#title {
     font-size: 1.75em;
 }
 
+div#row {
+  width: 100%;
+  position: relative;
+}
+
 h2.sectitle {
     border: solid 0px 0px 1px 1px;
     padding: 1px 20px 1px 20px;
-    margin-top: 0px;
     float: right;
     border-color: black;
     font-size: 1.25em;
@@ -49,40 +47,47 @@ p.seccontent {
     padding: 20px;
 }
 
-section.sec1, section.sec2, section.sec3 {
+section.sec {
     border: solid 1px;
-    margin: 20px 0px 20px 20px;
     background-color: lavender;
+}
+
+div.wrapper1, div.wrapper2, div.wrapper3 {
+    padding: 0px 20px 20px 20px;
 }
 
 /********** Desktop devices only ***********/
 @media (min-width: 992px) {
-  section.sec1, section.sec2, section.sec3 {
-    width: calc(33.33% - 20px);
+  div.wrapper1, div.wrapper2, div.wrapper3 {
+    width: 33.33%;
     float: left;
+  }
+  div.wrapper2, div.wrapper3 {
+    padding-left: 0px;
   }
 }
 
 /********** Tablet devices only ***********/
 @media (min-width: 768px) and (max-width: 991px) {
-  section.sec1 {
-    width: calc(50% - 20px);
-    float: left;
-  }
-  section.sec2 {
-    width: calc(50% - 20px);
-    float: left;
-  }
-  section.sec3 {
-    width: calc(100% - 20px);
-    float: left;
-  }
+    div.wrapper1 {
+        width: 50%;
+        float: left;    
+    }
+    div.wrapper2 {
+        width: 50%;
+        float: left;
+        padding-left: 0px;
+    }
+    div.wrapper3 {
+        width: 100%;
+        float: left;
+    }
 }
 
 /********** Phone devices only ***********/
 @media (max-width: 767px) {
-  section.sec1, section.sec2, section.sec3 {
-    width: calc(100% - 20px);
-    float: left;
-  }
+    div.wrapper1, div.wrapper2, div.wrapper3 {
+        width: 100%;
+        float: left;
+    }
 }

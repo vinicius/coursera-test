@@ -42,6 +42,7 @@ body {
 .navbar-toggle {
     background-color: black;
 }
+
 /** End of HEADER **/
 
 /** MENU section **/
@@ -61,6 +62,7 @@ section.row div div {
     border-top-width: 100px;
     border: 30px transparent #fff;
     position: relative;
+    margin: 0px 0px 50px 0px;
 }
 
 span#menu-item {
@@ -71,4 +73,6 @@ span#menu-item {
     font-size: 1.3em;
     width: 100%;
 }
+
+
 /** End of MENU Section **/

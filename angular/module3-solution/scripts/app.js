@@ -34,7 +34,7 @@
                     console.log("Something is not right...");
                 });
             } else {
-                controller.found = true;
+                controller.found = [];
             }
         }
 

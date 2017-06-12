@@ -1,0 +1,9 @@
+<ul>
+    <li ng-repeat="item in $ctrl.items">
+        <h5><span class="label label-info">{{item.name}}</span><p>
+            <span ng-if='item.description'>({{item.description}})</span>
+            <span ng-if='!item.description'>(no description available)</span>
+        </h5>
+        <p>
+    </li>
+</ul>

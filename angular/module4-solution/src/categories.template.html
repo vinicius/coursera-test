@@ -1,0 +1,10 @@
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+            <button class="btn btn-primary" ng-repeat="item in $ctrl.categories" ui-sref="categoryItems({categorySD: item.short_name})">
+            {{item.name}}
+            </button>
+            </div>
+        </div>
+    </div>
+

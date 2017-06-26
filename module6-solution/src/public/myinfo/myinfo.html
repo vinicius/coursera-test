@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+  <h2 id="myinfo" class="text-center">My information</h2>
+  <div class="text-center" ng-if="!myinfoCtrl.user.menuitem">
+    Not Signed Up Yet. 
+   <a ui-sref="public.signup"> Sign up Now!</a>
+  </div>
+
+  <fieldset ng-if="myinfoCtrl.user.menuitem" class="text-center myinfo">
+
+      <div class="col-md-4 col-md-offset-4">
+            <span>Firstname: </span>
+            {{myinfoCtrl.user.firstname}}
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+            <span>Lastname: </span>
+            {{myinfoCtrl.user.lastname}}
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+            <span>E-mail: </span>
+            {{myinfoCtrl.user.email}}
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+            <span>Phone: </span>
+            {{myinfoCtrl.user.phone}}
+      </div>
+      
+      <div class="col-md-4 col-md-offset-4 text-center">
+            <img class="img-responsive center" width="250" height="150" ng-src="https://vinicius-angularjs.herokuapp.com/images/{{myinfoCtrl.user.menuitem.short_name}}.jpg">
+      </div>
+
+      <div class="col-md-4 col-md-offset-4">
+            <span>Item name: </span>
+            {{myinfoCtrl.user.menuitem.name}}
+      </div>
+      <div class="col-md-4 col-md-offset-4">
+            <span>Item description: </span>
+            {{myinfoCtrl.user.menuitem.description}}
+      </div>
+
+  </fieldset>
+  </div>
+</div>

@@ -15,10 +15,12 @@ function SignupController(MenuItemService) {
 
     promise.then(function (response) {
       MenuItemService.saveUserInformation($ctrl.firstname, $ctrl.lastname, $ctrl.email, $ctrl.phone, response.data);
+      $ctrl.itemNotFound = null;
       $ctrl.itemFound = true;
     })
     .catch(function (error) {
       $ctrl.itemNotFound = true;
+      $ctrl.itemFound = null;
       console.log("Something went terribly wrong.");
     });
   }
